@@ -319,7 +319,7 @@ class IPNetwork(object):
             while (ip & 1) == 0 and ip != 0:
                 ip >>= 1
                 prefix_size += 1
-        if addr_len != 32:
+            if addr_len != 32:
                 logging.warn(
                     "You did't specify CIDR routing prefix size for %s, "
                     "implicit treated as %s/%d" % (addr, addr, addr_len)
