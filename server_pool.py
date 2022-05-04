@@ -185,10 +185,7 @@ class ServerPool(object):
                 a_config["max_connect"] = 128
                 a_config["method"] = common.to_str(a_config["method"])
                 try:
-                    logging.info(
-                        "starting server at %s:%d"
-                        % (a_config['server'], port))
-                    )
+                    logging.info("starting server at [%s]:%d" % (a_config['server'], port))
 
                     tcp_server = tcprelay.TCPRelay(
                         a_config, self.dns_resolver, False
